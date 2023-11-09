@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="XCTTabViewBug.MainPage">
+    <xct:TabView
+                x:Name="mainTabView"
+                Grid.RowSpan="2"
+                TabStripPlacement="Top"
+                TabIndicatorColor="Blue"
+                TabIndicatorHeight="80"
+                TabIndicatorPlacement="Center"
+                TabStripHeight="80"
+                IsTabTransitionEnabled="False">
+            <xct:TabView.TabStripBackgroundView>
+                <Frame>
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="#3d3d3d" Offset="0" />
+                            <GradientStop Color="#9d9d9d" Offset="1" />
+                        </LinearGradientBrush>
+                     </Frame.Background>
+                </Frame>
+            </xct:TabView.TabStripBackgroundView>
+            <xct:TabView.TabIndicatorView>
+                <Frame BackgroundColor="White">
+                </Frame>
+            </xct:TabView.TabIndicatorView>
+            <xct:TabViewItem Icon="icon" Text="Tab A">
+                <Grid RowDefinitions="*" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Grid.Row="0" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 6"
+                            TextTransform="Uppercase" Text="Tab A"/>
+                </Grid>
+            </xct:TabViewItem>
+            <xct:TabViewItem Icon="icon" Text="Tab B">
+                <Grid RowDefinitions="*" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Grid.Row="0" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 6"
+                            TextTransform="Uppercase" Text="Tab B"/>
+                </Grid>
+            </xct:TabViewItem>
+            <xct:TabViewItem Icon="icon" Text="Tab C">
+                <Grid RowDefinitions="*" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Grid.Row="0" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 6"
+                            TextTransform="Uppercase" Text="Tab C"/>
+                </Grid>
+            </xct:TabViewItem>
+        </xct:TabView>
+</ContentPage>
+
